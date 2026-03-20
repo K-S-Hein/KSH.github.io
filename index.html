@@ -1,97 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyaw Swar Hein | Full-Stack Developer</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Your Name | Portfolio</title>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
-        .hero { padding: 100px 0; background: #ffffff; border-bottom: 1px solid #dee2e6; }
-        .project-card { transition: transform 0.2s; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .project-card:hover { transform: translateY(-5px); }
-        .skill-badge { background: #e9ecef; color: #495057; padding: 8px 15px; border-radius: 20px; display: inline-block; margin: 5px; font-size: 0.9rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00adb5;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: #00adb5;
+            color: white;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+        }
+
+        #hero p {
+            margin-top: 10px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #00adb5;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        @media(max-width: 600px) {
+            #hero h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Kyaw Swar Hein</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="nav-link btn btn-primary text-white ms-lg-3" href="mailto:your@email.com">Contact Me</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-primary">Kyaw Swar Hein</span></h1>
-            <p class="lead text-muted mb-4">A Full-Stack Developer specializing in C#, Blazor, Angular, MSSQL, MySql and PostgreSql.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="https://github.com" class="btn btn-dark btn-lg">GitHub</a>
-                <a href="https://linkedin.com" class="btn btn-outline-primary btn-lg">LinkedIn</a>
-            </div>
-        </div>
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Technical Skills</h2>
-            <div class="text-center">
-                <span class="skill-badge">C# / .NET</span>
-                <span class="skill-badge">Blazor Server/WASM</span>
-                <span class="skill-badge">SQL Server / MySQL / PostgreSQL</span>
-                <span class="skill-badge">Entity Framework</span>
-                <span class="skill-badge">Angular</span>
-                <span class="skill-badge">JavaScript / Jquery</span>
-                <span class="skill-badge">Bootstrap 5 / CSS</span>
-                <span class="skill-badge">REST APIs</span>
-            </div>
+    <section id="hero">
+        <h1>Your Name</h1>
+        <p>Full Stack Developer | .NET | Blazor | JavaScript</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                I am a passionate developer with experience in building web applications 
+                using .NET, Blazor, and modern JavaScript frameworks. I enjoy solving 
+                problems and creating efficient solutions.
+            </p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Projects</h2>
-            <div class="row g-4">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 project-card">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Inventory Management System</h5>
-                            <p class="card-text text-muted">A Blazor-based system with real-time stock tracking and SQL integration.</p>
-                            <a href="#" class="btn btn-sm btn-outline-dark">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 project-card">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">E-Commerce API</h5>
-                            <p class="card-text text-muted">Robust REST API built with .NET Core featuring JWT authentication.</p>
-                            <a href="#" class="btn btn-sm btn-outline-dark">View Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card skills">
+            <span>C#</span>
+            <span>.NET Core</span>
+            <span>Blazor</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>MySQL</span>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-4 text-center border-top">
-        <p class="text-muted small">© 2024 Your Name. Built with Bootstrap.</p>
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>Short description of your project.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 2</h3>
+            <p>Short description of your project.</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email: your@email.com</p>
+            <p>GitHub: github.com/yourusername</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name</p>
     </footer>
 
 </body>
